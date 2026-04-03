@@ -1,0 +1,40 @@
+.offer-section {
+  padding: var(--spacing-2xl, 5rem) var(--spacing-lg, 2rem);
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.offer-heading {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--text-h, #1a1a2e);
+  text-align: left;
+  margin-bottom: 2rem;
+  letter-spacing: 0.015em;
+  line-height: 1.18;
+  word-spacing: 0.06em;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .offer-section {
+    padding: var(--spacing-2xl) 1.25rem;
+  }
+
+  .offer-heading {
+    font-size: 1.7rem;
+    margin-bottom: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .offer-section {
+    padding: var(--spacing-2xl) 1rem;
+  }
+
+  .offer-heading {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}

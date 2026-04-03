@@ -1,0 +1,129 @@
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: var(--spacing-2xl, 5rem) var(--spacing-lg, 2rem);
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+  overflow: visible;
+}
+
+.coral-triangle--prog {
+  position: absolute;
+  bottom: 10%;
+  left: 12%;
+  width: 0;
+  height: 0;
+  border-left: 28px solid transparent;
+  border-right: 28px solid transparent;
+  border-bottom: 48px solid #e8836b;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.progress-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.progress-image img {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-lg, 0 16px 48px rgba(0, 0, 0, 0.1));
+}
+
+.progress-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.progress-heading {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1.18;
+  color: var(--text-h, #1a1a2e);
+  letter-spacing: 0.015em;
+  word-spacing: 0.06em;
+}
+
+.progress-paragraph {
+  font-size: 0.95rem;
+  color: var(--text, #6b6b7b);
+  line-height: 1.65;
+  max-width: 420px;
+}
+
+.progress-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent, #7b5ea7);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  letter-spacing: 0.02em;
+  transition: color 0.25s, gap 0.25s;
+}
+
+.progress-link:hover {
+  color: var(--text-h, #1a1a2e);
+  gap: 0.65em;
+}
+
+@media (max-width: 768px) {
+  .progress {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-2xl) 1.25rem;
+    gap: 2rem;
+  }
+
+  .progress-heading {
+    font-size: 1.7rem;
+  }
+
+  .progress-paragraph {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .progress-link {
+    justify-content: center;
+  }
+
+  .progress-image img {
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .progress {
+    padding: var(--spacing-2xl) 1rem;
+    gap: 1.5rem;
+  }
+
+  .progress-text {
+    gap: 0.75rem;
+  }
+
+  .progress-heading {
+    font-size: 1.3rem;
+  }
+
+  .progress-paragraph {
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  .progress-image img {
+    max-width: 180px;
+  }
+}

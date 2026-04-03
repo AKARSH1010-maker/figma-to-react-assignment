@@ -1,0 +1,116 @@
+.service-row {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 1.25rem;
+  border-top: 1px solid var(--border, #ebebef);
+  cursor: pointer;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.service-row:last-child {
+  border-bottom: 1px solid var(--border, #ebebef);
+}
+
+.service-row:hover {
+  background-color: var(--accent-bg, rgba(123, 94, 167, 0.06));
+  padding-left: 2rem;
+}
+
+.service-row:hover .service-row-arrow {
+  transform: translateX(6px);
+  color: var(--accent, #7b5ea7);
+}
+
+.service-row-left {
+  flex: 0 0 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.service-row-label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text, #6b6b7b);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.service-row-desc {
+  font-size: 0.78rem;
+  color: var(--text, #6b6b7b);
+}
+
+.service-row-title {
+  flex: 1;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--text-h, #1a1a2e);
+  text-align: left;
+  letter-spacing: 0.015em;
+  padding-left: 2rem;
+  word-spacing: 0.06em;
+}
+
+.service-row-arrow {
+  color: var(--text, #6b6b7b);
+  display: flex;
+  align-items: center;
+  flex: 0 0 40px;
+  justify-content: flex-end;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .service-row {
+    padding: 1.1rem 1rem;
+  }
+
+  .service-row:hover {
+    padding-left: 1.25rem;
+  }
+
+  .service-row-left {
+    flex: 0 0 100px;
+  }
+
+  .service-row-desc {
+    display: none;
+  }
+
+  .service-row-title {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-row {
+    flex-wrap: wrap;
+    padding: 1rem 0.75rem;
+    gap: 0.25rem;
+  }
+
+  .service-row-left {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .service-row-label {
+    font-size: 0.65rem;
+  }
+
+  .service-row-title {
+    flex: 1;
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .service-row-arrow {
+    font-size: 1rem;
+  }
+
+  .service-row:hover {
+    padding-left: 1rem;
+  }
+}

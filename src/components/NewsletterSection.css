@@ -1,0 +1,141 @@
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #e9f5ec;
+  padding: 4rem var(--spacing-lg, 2rem) 3.5rem;
+  gap: 1rem;
+  border-radius: 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative blob */
+.newsletter::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(58, 125, 68, 0.08) 0%, transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.newsletter::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(198, 241, 201, 0.2) 0%, transparent 60%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.newsletter-heading {
+  font-family: var(--font-heading);
+  font-size: 3.2rem;
+  font-weight: 300;
+  color: var(--text-h, #1a1a2e);
+  letter-spacing: 0.015em;
+  line-height: 1.18;
+  word-spacing: 0.06em;
+  max-width: 480px;
+}
+
+.newsletter-decor-curly {
+  width: 50px;
+  height: 42px;
+  margin-bottom: -0.5rem;
+  pointer-events: none;
+}
+
+.newsletter-subtext {
+  font-size: 0.95rem;
+  color: var(--text, #6b6b7b);
+  max-width: 420px;
+  line-height: 1.65;
+}
+
+/* Purple decorative shape on right */
+.newsletter-decor-purple {
+  position: absolute;
+  top: 45%;
+  right: -15px;
+  transform: translateY(-50%) rotate(-15deg);
+  width: 140px;
+  height: 180px;
+  background: var(--accent, #7b5ea7);
+  border-radius: 60% 60% 30% 60%;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.newsletter-button {
+  margin-top: 0.5rem;
+  padding: 0.85rem 2.25rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #1a1a2e;
+  border: none;
+  border-radius: var(--radius-pill, 100px);
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background-color: #0d0d1a;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 28px rgba(26, 26, 46, 0.3);
+}
+
+@media (max-width: 768px) {
+  .newsletter {
+    padding: 2.5rem 1.25rem;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .newsletter-heading {
+    font-size: 1.6rem;
+  }
+
+  .newsletter-subtext {
+    font-size: 0.9rem;
+  }
+
+  .newsletter-decor-purple {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter {
+    padding: 1.75rem 1rem;
+    margin: 0;
+    border-radius: 0;
+    gap: 0.75rem;
+  }
+
+  .newsletter-heading {
+    font-size: 1.2rem;
+  }
+
+  .newsletter-subtext {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .newsletter-button {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.88rem;
+  }
+}

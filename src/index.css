@@ -1,0 +1,231 @@
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== CSS Variables ===== */
+:root {
+  --text: #6b6b7b;
+  --text-h: #1a1a2e;
+  --bg: #fefefe;
+  --border: #ebebef;
+  --card-bg: #f7f6f2;
+  --accent: #7b5ea7;
+  --accent-bg: rgba(123, 94, 167, 0.06);
+  --green: #c6f1c9;
+  --green-dark: #2a6b34;
+  --pink: #f8c4d8;
+  --yellow: #f5d547;
+  --coral: #e8836b;
+  --purple-shape: #7b5ea7;
+  --newsletter-bg: #e9f5ec;
+
+  --font: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Clash Display', 'DM Sans', system-ui, sans-serif;
+
+  --container: 1140px;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 5rem;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --radius-pill: 100px;
+
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Base Styles ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  max-width: var(--container);
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--text-h);
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-size: 3.75rem;
+  line-height: 1.12;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 2.25rem;
+  line-height: 1.12;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+
+h4 {
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p {
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ===== Responsive Typography ===== */
+@media (max-width: 768px) {
+  :root {
+    --spacing-2xl: 3.5rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    line-height: 1.06;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --spacing-2xl: 2.25rem;
+  }
+
+  h1 {
+    font-size: 1.65rem;
+    line-height: 1.08;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    line-height: 1.12;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+}
+
+/* ===== Container Utility ===== */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* ===== Link Dash Utility ===== */
+.link-dash {
+  display: inline-block;
+  width: 60px;
+  height: 1.5px;
+  background: currentColor;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+/* ===== Responsive Base ===== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 1.65rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
