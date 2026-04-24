@@ -12,6 +12,7 @@ This project is a pixel-perfect implementation of the provided Figma design usin
 * CSS / Tailwind CSS
 * Docker
 * Nginx (for serving production build)
+* Figma
 
 ---
 
