@@ -4,7 +4,6 @@
 
 This project is a pixel-perfect implementation of the provided Figma design using React (Vite). The goal was to convert the design into a fully functional, responsive web application with clean code and reusable components.
 
----
 
 # Tech Stack
 
@@ -14,7 +13,7 @@ This project is a pixel-perfect implementation of the provided Figma design usin
 * Nginx (for serving production build)
 * Figma
 
----
+
 
 # Features
 
@@ -24,7 +23,7 @@ This project is a pixel-perfect implementation of the provided Figma design usin
 * Proper spacing, typography, and layout
 * Hover interactions for better user experience
 
----
+
 
 # Project Structure
 
@@ -57,14 +56,13 @@ docker run -p 3000:80 assignment-react
 
 http://localhost:3000
 
----
+
 
 # Local Development (Optional)
 
 npm install
 npm run dev
 
----
 
  # Notes 
  
@@ -72,7 +70,6 @@ npm run dev
 * Focus was on responsiveness, UI accuracy, and clean code
 * Docker is used to ensure easy setup and consistent environment
 
----
 
  Author-
 Akarsh Singh Sisoudia
